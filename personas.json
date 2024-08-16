@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "nombre": "Juan Pérez",
+    "nacimiento": "1995-02-12",
+    "numero": "123456789",
+    "gmail": "juan.perez@example.com",
+    "profesion": "medico",
+    "certificado_N": null
+  },
+  {
+    "id": 2,
+    "nombre": "Ana Gómez",
+    "nacimiento": "1988-05-20",
+    "numero": "987654321",
+    "gmail": "ana.gomez@example.com",
+    "profesion": "ingeniera",
+    "certificado_N": "ABC123"
+  },
+  {
+    "id": 3,
+    "nombre": "Luis Martínez",
+    "nacimiento": "1990-11-15",
+    "numero": "555555555",
+    "gmail": "luis.martinez@example.com",
+    "profesion": "arquitecto",
+    "certificado_N": "XYZ789"
+  }
+]

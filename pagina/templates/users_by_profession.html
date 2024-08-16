@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios por Profesión</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #2980b9;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        li:hover {
+            transform: translateY(-5px);
+        }
+        li strong {
+            color: #2c3e50;
+            font-size: 1.2em;
+        }
+        .nav-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #2ecc71;
+            color: #fff;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .nav-button:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <h1>Usuarios con profesión: {{ profesion }}</h1>
+    <ul>
+        {% for user in users %}
+        <li>
+            <strong>{{ user.username }}</strong><br>
+            Nacimiento: {{ user.nacimiento }}<br>
+            Número: {{ user.numero }}<br>
+            Gmail: {{ user.gmail }}
+        </li>
+        {% endfor %}
+    </ul>
+    
+    <a href="{{ url_for('index') }}" class="nav-button">Volver a la lista completa</a>
+</body>
+</html>
